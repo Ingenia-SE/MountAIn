@@ -10,3 +10,6 @@ Hi, let's begin the implementation of the project with our GitHub repository! - 
 Changes made while editing in juan_garcia_thieux branch
 
 Nuevo archivo con texte nuevo
+
+
+Lunes 1 de marzo del 2021
