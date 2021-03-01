@@ -8,3 +8,5 @@ Hi everyone, I'm glad to use this GitHub repository. OM.
 Hi, let's begin the implementation of the project with our GitHub repository! - Juan
 
 Changes made while editing in juan_garcia_thieux branch
+
+Lunes 1 de marzo de 2021
