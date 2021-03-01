@@ -17,3 +17,5 @@
     EJECUTAR  en la linea de comandos de Windows, una vez en el directorio del arhivo: py get-pip.py
     Con Pip instalado, podeis instalar nuevas librerías (por ejemplo numpy) con el comando: py -m pip install numpy
 """
+
+#Estoy en mi rama, Irene-predicion
