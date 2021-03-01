@@ -7,6 +7,4 @@ Hi everyone, I'm glad to use this GitHub repository. OM.
 
 Hi, let's begin the implementation of the project with our GitHub repository! - Juan
 
-Hello
-
 Changes made while editing in juan_garcia_thieux branch
