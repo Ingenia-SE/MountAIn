@@ -19,3 +19,6 @@
 """
 
 #Estoy en mi rama, Irene-predicion
+
+#esta es un prueba siguiendo un tutorial para familiarizarme con SARIMAX
+
