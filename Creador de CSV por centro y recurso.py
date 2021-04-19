@@ -1,6 +1,8 @@
 #%%
 import pandas as pd
 import numpy as np
+from dateutil.rrule import rrule, MONTHLY
+
 from datetime import datetime
 from matplotlib import pyplot
 
@@ -38,13 +40,12 @@ def daterange(start_date, end_date):
         yield start_date + timedelta(n)
 #FECHA INICIO Y FIN DEL BUCLE
 start_date = date(2014, 1, 1)
-end_date = date(2015, 1, 1)
+end_date = date(2020, 6, 9)
 for single_date in daterange(start_date, end_date):
     dia_sem=single_date.strftime("%a")
     intervalo_inf=Datos[Datos.FechaInicioLectura <= pd.to_datetime(single_date)]
     intervalo=intervalo_inf[intervalo_inf.FechaFinLectura > pd.to_datetime(single_date)]
     Consumo_intervalo=pd.to_numeric(intervalo["ConsumoTotal"]).sum()
-    print (single_date)
     if Consumo_intervalo > 0:
         fecha_fin=intervalo['FechaFinLectura'].iloc[0]
         fecha_ini=intervalo['FechaInicioLectura'].iloc[0]
@@ -60,7 +61,14 @@ for single_date in daterange(start_date, end_date):
             single_date= single_date+ timedelta(days=1)
     else:
         print ("ERROR")
-        print (single_date)
 
-df_data.to_csv('Industriales.csv',index=False)
-# %%
+df_data=df_data[1:]
+
+df_data=df_data.set_index('Dia')
+df_data.index = pd.to_datetime(df_data.index)
+df_mensual = df_data.resample('MS').sum()
+print (df_mensual.head(10))
+df_mensual= df_mensual.reset_index()
+print (df_mensual.head(10))
+df_mensual.to_csv('Industriales.csv',index=False)
+
